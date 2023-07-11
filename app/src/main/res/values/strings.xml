@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MooviCart</string>
+    <string name="otp_countdownText">Resend OTP in %1d s</string>
+    <string name="otp_countdownFinishText">Resend OTP</string>
+</resources>
