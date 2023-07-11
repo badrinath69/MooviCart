@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "369174546505",
+    "project_id": "moovicart-80f4e",
+    "storage_bucket": "moovicart-80f4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369174546505:android:1c2c324ddeabf23d415798",
+        "android_client_info": {
+          "package_name": "com.example.moovicart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369174546505-bc0jsnutd6dpidlt1e57prh15l7cskmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moovicart",
+            "certificate_hash": "768ff1f412cdf901d42840dcae212d52797fc95c"
+          }
+        },
+        {
+          "client_id": "369174546505-201psc2gvqdn0gr2v62691huo89u53td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQdqrF4W5BWMigz8v8FyjqgDBBpKdVqLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369174546505-201psc2gvqdn0gr2v62691huo89u53td.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
