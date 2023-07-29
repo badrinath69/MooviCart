@@ -53,6 +53,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
     implementation 'com.google.firebase:firebase-auth:22.0.0'
     implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.7.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
 
     //Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
@@ -63,4 +65,6 @@ dependencies {
 
     //Country Code Picker Library
     implementation ("com.hbb20:ccp:2.7.2")
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

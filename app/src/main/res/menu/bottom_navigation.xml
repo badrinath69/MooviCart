@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment2"
+        android:title="Home"
+        android:icon="@drawable/baseline_dashboard_24"/>
+    <item
+        android:id="@+id/myMoviesFragment"
+        android:title="MyMovies"
+        android:icon="@drawable/baseline_movie_24"/>
+    <item
+        android:id="@+id/bookingFragment"
+        android:title="Booking"
+        android:icon="@drawable/baseline_book_24"/>
+    <item
+        android:title="Reviews"
+        android:id="@+id/reviewsFragment"
+        android:icon="@drawable/baseline_reviews_24"/>
+
+    <item
+        android:title="Profile"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+
+</menu>

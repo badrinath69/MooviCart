@@ -10,15 +10,6 @@
 
     <!--     android:fitsSystemWindows="false"     -->
 
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -29,28 +20,6 @@
 
 
                 <!-- Add your app's content here -->
-                <ImageView
-                    android:id="@+id/dropdown_menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="19dp"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/baseline_menu_24"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/app_logo"
-                    android:layout_width="110dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="start"
-                    android:src="@drawable/img"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintStart_toEndOf="@id/dropdown_menu"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.051"
-                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <LinearLayout
@@ -64,7 +33,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/app_logo">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:layout_margin="9dp"
@@ -328,23 +297,10 @@
 
                 </LinearLayout>
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@color/white"
-            android:fitsSystemWindows="true"
-            app:headerLayout="@layout/nav_header"
-            app:itemTextColor="@color/black"
-            app:menu="@menu/nav_menu" />
-
-    </androidx.drawerlayout.widget.DrawerLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
