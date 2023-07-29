@@ -1,6 +1,7 @@
 package com.example.moovicart.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -15,7 +16,12 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.navigation.fragment.findNavController
+import com.example.moovicart.BaseActivity
 import com.example.moovicart.R
+import com.example.moovicart.hide
+import com.example.moovicart.show
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 
 class SplashscreenFragment : Fragment() {
@@ -24,12 +30,14 @@ class SplashscreenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-// Inflate the layout for this fragment
+
         Handler(Looper.getMainLooper()).postDelayed({
-            if (onFinished()) {
-                findNavController().navigate(R.id.navigate_splashFragment_to_homeFragment)
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            if (currentUser != null) {
+                // User is authenticated
+                startActivity(Intent(requireContext(), BaseActivity::class.java))
             } else {
+                // User is not authenticated
                 findNavController().navigate(R.id.action_splashFragment_to_onBoardingFragment)
             }
         }, 3000)
@@ -40,18 +48,11 @@ class SplashscreenFragment : Fragment() {
         val animBottom = AnimationUtils.loadAnimation(view.context, R.anim.from_bottom)
 
         val tvSplash = view.findViewById<CardView>(R.id.logo)
-        val imgSplash = view.findViewById<TextView>(R.id.name)
+        val imgSplash = view.findViewById<ImageView>(R.id.name)
 
         tvSplash.animation = animBottom
         imgSplash.animation = animTop
 
         return view
     }
-
-    private fun onFinished(): Boolean {
-        val sharedPreferences =
-            requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-        return sharedPreferences.getBoolean("finished", false)
-    }
-
 }

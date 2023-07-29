@@ -21,11 +21,18 @@ class FourtPage : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_onboard4, container, false)
         val next = view.findViewById<Button>(R.id.login)
-
+        val register = view.findViewById<Button>(R.id.register)
         next.setOnClickListener {
             findNavController().navigate(R.id.action_onBoardingFragment_to_SendOTPFragment)
             onBoardingIsFinished()
         }
+        register.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardingFragment_to_chooseUserTypeFragment)
+        }
+
+
+
+
         return view
     }
 

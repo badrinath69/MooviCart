@@ -1,6 +1,7 @@
 package com.example.moovicart.Authentication
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.Editable
@@ -16,6 +17,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.moovicart.Authentication.Verification.FirebaseLoginResponseStates
 import com.example.moovicart.Authentication.Verification.LoginViewModel
+import com.example.moovicart.BaseActivity
 import com.example.moovicart.Fragments.HomeFragment
 import com.example.moovicart.R
 import com.google.android.material.snackbar.Snackbar
@@ -94,10 +96,13 @@ class OTPVerifyFragment() : Fragment() {
 
     private fun redirectToHomeFragment() {
         parentFragmentManager.popBackStack()
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.verify, HomeFragment())
-            .setCustomAnimations(R.anim.fragment_slide_in, R.anim.fragment_slide_out)
-            .commit()
+
+//        parentFragmentManager.beginTransaction()
+//            .replace(R.id.verify, HomeFragment())
+//            .setCustomAnimations(R.anim.fragment_slide_in, R.anim.fragment_slide_out)
+//            .commit()
+
+        startActivity(Intent(requireContext(), BaseActivity::class.java))
     }
 
     // requesting focus for first OTP EditText and
