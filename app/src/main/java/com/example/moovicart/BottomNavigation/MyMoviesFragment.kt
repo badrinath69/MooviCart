@@ -10,6 +10,7 @@ import com.example.moovicart.Adapter.CustomPagerAdapter
 import com.example.moovicart.Fragments.Producer.MyMovieListFragment
 import com.example.moovicart.Fragments.Producer.TradingOptionsFragment
 import com.example.moovicart.R
+import com.example.moovicart.databinding.FragmentMyMovieListBinding
 import com.google.android.material.tabs.TabLayout
 
 class MyMoviesFragment : Fragment() {
