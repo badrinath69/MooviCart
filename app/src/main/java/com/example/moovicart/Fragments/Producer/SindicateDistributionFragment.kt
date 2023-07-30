@@ -35,7 +35,6 @@ class SindicateDistributionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.back.setOnClickListener {
-            startActivity(Intent(requireContext(), BaseActivity::class.java))
         }
 
         val items = listOf("Syndicate Distribution")
@@ -49,8 +48,8 @@ class SindicateDistributionFragment : Fragment() {
         val items8 = listOf("Trailer","Event video")
 
         val spp = view.findViewById<Spinner>(R.id.spinner7)
-        val adapt= ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, items7)
-        adapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adapt= ArrayAdapter(requireContext(), R.layout.custom_spinner_item, items7)
+        adapt.setDropDownViewResource(R.layout.custom_spinner_item)
         spp.adapter = adapt
         spp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -63,8 +62,8 @@ class SindicateDistributionFragment : Fragment() {
         }
 
         val spin = view.findViewById<Spinner>(R.id.spinner8)
-        val adaptt= ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, items8)
-        adaptt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adaptt= ArrayAdapter(requireContext(), R.layout.custom_spinner_item, items8)
+        adaptt.setDropDownViewResource(R.layout.custom_spinner_item)
         spin.adapter = adaptt
         spin.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -77,24 +76,10 @@ class SindicateDistributionFragment : Fragment() {
         }
 
         val sp = view.findViewById<Spinner>(R.id.spinner6)
-        val adapter0 = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, items6)
-        adapter0.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adapter0 = ArrayAdapter(requireContext(), R.layout.custom_spinner_item, items6)
+        adapter0.setDropDownViewResource(R.layout.custom_spinner_item)
         sp.adapter = adapter0
         sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selectedItem = parent?.getItemAtPosition(position).toString()
-//                Toast.makeText(requireContext(), "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
-            }
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Do nothing
-            }
-        }
-
-        val spi = view.findViewById<Spinner>(R.id.spinner)
-        val adapte = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, items)
-        adapte.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spi.adapter = adapte
-        spi.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedItem = parent?.getItemAtPosition(position).toString()
 //                Toast.makeText(requireContext(), "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
@@ -133,8 +118,4 @@ class SindicateDistributionFragment : Fragment() {
 //        }
     }
 
-    override fun onResume() {
-        super.onResume()
-        hide()
-    }
 }

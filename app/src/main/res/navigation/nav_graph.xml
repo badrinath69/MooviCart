@@ -72,5 +72,19 @@
         android:name="com.example.moovicart.Fragments.Producer.SindicateDistributionFragment"
         android:label="fragment_sindicate_distribution"
         tools:layout="@layout/fragment_sindicate_distribution" />
+    <fragment
+        android:id="@+id/tradingOptionsFragment"
+        tools:layout="@layout/fragment_trading_options"
+        android:name="com.example.moovicart.Fragments.Producer.TradingOptionsFragment"
+        android:label="TradingOptionsFragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/myMoviesFragment2"
+        android:name="com.example.moovicart.BottomNavigation.MyMoviesFragment"
+        android:label="MyMoviesFragment" >
+        <action
+            android:id="@+id/action_myMoviesFragment2_to_sindicateDistributionFragment"
+            app:destination="@id/sindicateDistributionFragment" />
+    </fragment>
 
 </navigation>

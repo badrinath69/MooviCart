@@ -30,27 +30,23 @@ class BaseActivity : AppCompatActivity() {
                 }
 
                 R.id.myMoviesFragment -> {
-                    // Handle click on Dashboard button
                     supportFragmentManager.beginTransaction().addToBackStack("")
                         .add(R.id.main, MyMoviesFragment()).commit()
                     true
                 }
 
                 R.id.bookingFragment -> {
-                    // Handle click on Notifications button
                     supportFragmentManager.beginTransaction().addToBackStack("")
                         .add(R.id.main, BookingFragment()).commit()
                     true
                 }
 
                 R.id.reviewsFragment -> {
-                    // Handle click on Notifications button
                     supportFragmentManager.beginTransaction().addToBackStack("")
                         .add(R.id.main, ReviewsFragment()).commit()
                     true
                 }
                 R.id.profileFragment -> {
-                    // Handle click on Notifications button
                     supportFragmentManager.beginTransaction().addToBackStack("")
                         .add(R.id.main, ProfileFragment()).commit()
                     true
