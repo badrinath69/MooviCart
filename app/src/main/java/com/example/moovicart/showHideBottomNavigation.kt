@@ -12,3 +12,4 @@ fun Fragment.show(){
     val bn=(activity as BaseActivity).findViewById<BottomNavigationView>(R.id.bottom)
     bn.visibility= View.VISIBLE
 }
+

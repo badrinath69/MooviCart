@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/myProfileFragment">
+
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.example.moovicart.Fragments.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/myDashboardFragment"
+        android:name="com.example.moovicart.Fragments.MyDashboardFragment"
+        android:label="fragment_my_dashboard"
+        tools:layout="@layout/fragment_my_dashboard" >
+        <action
+            android:id="@+id/action_myDashboardFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/benefitsFragment"
+        android:name="com.example.moovicart.Fragments.BenefitsFragment"
+        android:label="fragment_benefits"
+        tools:layout="@layout/fragment_benefits" />
+    <fragment
+        android:id="@+id/howItWorksFragment"
+        android:name="com.example.moovicart.Fragments.HowItWorksFragment"
+        android:label="fragment_how_it_works"
+        tools:layout="@layout/fragment_how_it_works" />
+    <fragment
+        android:id="@+id/latestMoviesFragment"
+        android:name="com.example.moovicart.Fragments.LatestMoviesFragment"
+        android:label="fragment_latest_movies"
+        tools:layout="@layout/fragment_latest_movies" />
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.moovicart.Fragments.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details" >
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_myDashboardFragment"
+            app:destination="@id/myDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/overViewFragment"
+        android:name="com.example.moovicart.Fragments.OverViewFragment"
+        android:label="fragment_overview"
+        tools:layout="@layout/fragment_overview" >
+        <argument
+            android:name="posi"
+            app:argType="integer" />
+
+    </fragment>
+</navigation>

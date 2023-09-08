@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.OverViewFragment">
+
+
+    <ScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/fo_tv"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_thin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <LinearLayout
+                android:id="@+id/fo_ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fo_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical">
+                <TextView
+                    android:text="PHOTOS"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+
+                    android:fontFamily="@font/poppins_thin"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <View
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/dashed"
+                    android:backgroundTint="@color/black"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fo_rv1"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    ></androidx.recyclerview.widget.RecyclerView>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fo_ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fo_ll1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical">
+                <TextView
+                    android:text="VIDEOS"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_thin"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <View
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/dashed"
+                    android:backgroundTint="@color/black"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fo_rv2"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    ></androidx.recyclerview.widget.RecyclerView>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fo_ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fo_ll2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical">
+                <TextView
+                    android:text="CAST"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_thin"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <View
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/dashed"
+                    android:backgroundTint="@color/black"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <ProgressBar
+                android:id="@+id/fov_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.418" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

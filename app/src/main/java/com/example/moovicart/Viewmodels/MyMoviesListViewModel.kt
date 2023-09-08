@@ -30,6 +30,7 @@ class MyMoviesListViewModel @Inject constructor()  :ViewModel() {
         }
 
 
+
         firebase.collection("myMovies")
             .whereEqualTo("category","my movies").get().addOnSuccessListener { result ->
                 val ProductList=result.toObjects(product::class.java)

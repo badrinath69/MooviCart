@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+
+        android:title="Profile"
+        android:id="@+id/myProfileFragment"
+        android:icon="@drawable/icon_home"
+
+
+        ></item>
+
+    <item
+        android:title="Dashboard"
+        android:icon="@drawable/icon_dashboard"
+        android:id="@+id/myDashboardFragment"
+        ></item>
+    <item
+        android:title="Benefits"
+        android:icon="@drawable/icon_home"
+        android:id="@+id/benefitsFragment"
+        ></item>
+
+    <item
+        android:title="How It Works"
+        android:icon="@drawable/icon_home"
+        android:id="@+id/howItWorksFragment"
+        ></item>
+    <item
+        android:title="Latest Movies"
+        android:icon="@drawable/icon_home"
+        android:id="@+id/latestMoviesFragment"></item>
+
+    </menu>
+
+
